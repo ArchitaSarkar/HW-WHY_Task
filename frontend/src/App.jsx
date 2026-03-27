@@ -1,15 +1,16 @@
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Register from './pages/Register';
-import Login from './pages/Login'; // Create a basic login similarly
-import Dashboard from './pages/Dashboard';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Register from "./pages/Register"; // NO curly braces
+import Login from "./pages/Login";       // NO curly braces
+import Dashboard from "./pages/Dashboard"; // NO curly braces
 
 function App() {
   return (
     <Router>
-      <nav className="navbar">
-        <Link to="/">Register</Link>
-        <Link to="/login">Login</Link>
-        <Link to="/dashboard">Dashboard</Link>
+      <nav style={{ padding: '15px', background: '#222', color: '#fff' }}>
+        <Link to="/" style={{ color: '#fff', marginRight: '10px' }}>Register</Link>
+        <Link to="/login" style={{ color: '#fff', marginRight: '10px' }}>Login</Link>
+        <Link to="/dashboard" style={{ color: '#fff' }}>Dashboard</Link>
       </nav>
       <Routes>
         <Route path="/" element={<Register />} />
